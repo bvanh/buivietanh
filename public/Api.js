@@ -5,11 +5,12 @@ function getId() {
   return getId;
 }
 let usersId = getId();
-axios.get(API_fake +'/'+ usersId)
-  .then(function (response) {
-    // handle success
-    updateData(response.data);
-  });
+function updateData(obj) {
+  document.getElementById("name").value = obj.name;
+  document.getElementById("year").value = obj.year;
+  document.getElementById("email").value = obj.email;
+  document.getElementById("number").value = obj.sodienthoai
+}
 ///checkbox
 let el = document.getElementById("checkall"); //let for ES6 aficionados 
 el.onclick = checkAll; //again, function reference, no ()
@@ -86,6 +87,11 @@ function myFunction(arr) {
 }
 // end get data
 //edit data
+axios.get(API_fake +'/'+ usersId)
+  .then(function (response) {
+    // handle success
+    updateData(response.data);
+  });
 function updateUser() {
   let myName = document.getElementById("name").value;
   let myYear = document.getElementById("year").value;
@@ -106,6 +112,7 @@ function updateUser() {
       console.log("da them")
     })
 }
+
 //end edit data
 //api lưu đăng ký
 function saveData() {
