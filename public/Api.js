@@ -5,6 +5,11 @@ function getId() {
   return getId;
 }
 let usersId = getId();
+axios.get(API_fake +'/'+ usersId)
+  .then(function (response) {
+    // handle success
+    updateData(response.data);
+  });
 ///checkbox
 let el = document.getElementById("checkall"); //let for ES6 aficionados 
 el.onclick = checkAll; //again, function reference, no ()
@@ -101,12 +106,6 @@ function updateUser() {
       console.log("da them")
     })
 }
-
-axios.get(API_fake +'/'+ usersId)
-  .then(function (response) {
-    // handle success
-    updateData(response.data);
-  });
 //end edit data
 //api lưu đăng ký
 function saveData() {
