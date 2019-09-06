@@ -1,5 +1,5 @@
 {
-  "name": "jquery-ajax-example",
+  "name": "dataserver-demo-ajax",
   "version": "1.0.0",
   "description": "Source code ví dụ mẫu quản lý học viên sử dụng jQuery Ajax",
   "scripts": {

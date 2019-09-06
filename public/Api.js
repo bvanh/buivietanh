@@ -1,4 +1,4 @@
-let API_fake = '/users';
+const API_fake = '/users';
 //lấy id url để đổi thông tin
 function getId() {
   let getId = new URLSearchParams(window.location.search).get('id')
