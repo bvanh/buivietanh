@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    .btn:active{
+        outline: none !important;
+      }
+
+    .btn-primary,
+    .btn-secondary {
+      margin: 0 .2rem !important;
+    }
+
+    a {
+      color: white !important;
+    }
+    .addusers{
+      margin-bottom: 1rem !important;
+      display: flex;
+      align-items: center;
+      justify-content:space-between;
+    }
+    .example{
+      border:2px solid black;
+      padding:.2rem;
+    }
+  </style>
+
+  <title>Quản lý data</title>
+</head>
+
+<body style="width:80%;margin:0 auto;">
+  <h1>Danh sách!</h1>
+  <div class="addusers">
+  <button type="button" class="btn btn-success"><a href="form-register.html"
+      style="color:white;">Thêm học viên</a></button>
+      <input type="text"class="example"onkeyup="searchName()"id="myFilter" placeholder="Tìm kiếm...?" style="font-family:Arial, FontAwesome;" name="search">
+    </div>
+  <table class="table ">
+          <thead class="thead-dark">
+      <tr>
+        <th scope="col">Họ và tên</th>
+        <th scope="col">Năm sinh</th>
+        <th scope="col">Email</th>
+        <th scope="col">Số điện thoại</th>
+        <th scope="col"><button type='button' class='btn btn-primary btn-sm'id="checkall">Chọn tất cả</button></th>
+        <th scope="col">
+          <button type='button' class='btn btn-danger btn-sm'data-toggle="modal" data-target="#exampleModal">Xóa mục đã chọn</button>
+        </th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody id="tb">
+    </tbody>
+  </table>
+  <!-- Button trigger modal
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Xóa
+  </button> -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Chắc chưa!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+          <button type="button" class="btn btn-primary "onclick="deleteCheckbox()"data-dismiss="modal">Đồng ý</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="text/javascript" src=Api.js></script>
+  <script type="text/javascript" src=sortData.js></script>
+  
+
+</body>
+
+</html>

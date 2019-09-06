@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "name": "Nguyễn Văn Tùng",
+      "year": "2000",
+      "email": "tung@gmail.com",
+      "sodienthoai": "0962986733",
+      "id": 2
+    },
+    {
+      "name": "Nguyễn Văn Hưng",
+      "year": "1999",
+      "email": "hung@gmail.com",
+      "sodienthoai": "+84226561616516",
+      "id": 3
+    },
+    {
+      "name": "Nguyễn Văn Tùng",
+      "year": "1999",
+      "email": "tung@gmail.com",
+      "sodienthoai": "00000009",
+      "id": 4
+    }
+  ]
+}
