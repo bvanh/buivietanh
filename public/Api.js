@@ -1,16 +1,4 @@
 const API_fake = '/users';
-//lấy id url để đổi thông tin
-function getId() {
-  let getId = new URLSearchParams(window.location.search).get('id')
-  return getId;
-}
-let usersId = getId();
-function updateData(obj) {
-  document.getElementById("name").value = obj.name;
-  document.getElementById("year").value = obj.year;
-  document.getElementById("email").value = obj.email;
-  document.getElementById("number").value = obj.sodienthoai
-}
 ///checkbox
 let el = document.getElementById("checkall"); //let for ES6 aficionados 
 el.onclick = checkAll; //again, function reference, no ()
@@ -86,34 +74,6 @@ function myFunction(arr) {
   document.getElementById("tb").innerHTML = print;
 }
 // end get data
-//edit data
-axios.get(API_fake +'/'+ usersId)
-  .then(function (response) {
-    // handle success
-    updateData(response.data);
-  });
-function updateUser() {
-  let myName = document.getElementById("name").value;
-  let myYear = document.getElementById("year").value;
-  let myEmail = document.getElementById("email").value;
-  let myNumber = document.getElementById("number").value;
-  axios({
-    method: 'put',
-    url: API_fake + '/' + usersId,
-    data: {
-      name: myName,
-      year: myYear,
-      email: myEmail,
-      sodienthoai: myNumber
-    }
-  })
-    .then(function (response) {
-      window.open("index.html", "_self")
-      console.log("da them")
-    })
-}
-
-//end edit data
 //api lưu đăng ký
 function saveData() {
   if (validForm()) {
