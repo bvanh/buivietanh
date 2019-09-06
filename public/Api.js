@@ -102,7 +102,7 @@ function updateUser() {
     })
 }
 
-axios.get(API_fake + usersId)
+axios.get(API_fake +'/'+ usersId)
   .then(function (response) {
     // handle success
     updateData(response.data);
